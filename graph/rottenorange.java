@@ -31,6 +31,9 @@ class Solution {
        while(!que.isEmpty())
        {
         rotten += que.size();
+        int size = que.sieze();
+        for(int i=0;i<size;i++)
+        {
         int nn[] = que.poll();
         int x = nn[0];
         int y = nn[1];
@@ -44,6 +47,7 @@ class Solution {
                 grid[nx][ny]= 2;
                 que.add(new int[]{nx,ny});
             }
+        }
         }
 
         if(!que.isEmpty())
